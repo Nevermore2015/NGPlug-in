@@ -10,7 +10,7 @@
 	</PersonalityInfo>
 	<Delphi.Personality>
 		<Source>
-			<Source Name="MainSource">GameRobot.dpr</Source>
+			<Source Name="MainSource">NGPlugin.dpr</Source>
 		</Source>
 		<FileVersion>
 			<FileVersion Name="Version">7.0</FileVersion>
