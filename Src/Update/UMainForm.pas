@@ -4,13 +4,14 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Gauges, UWorkProc;
+  Dialogs, StdCtrls, Gauges, UWorkProc,MD5, ComCtrls;
 
 type
   TForm1 = class(TForm)
-    g1: TGauge;
     lbl1: TLabel;
     lbl2: TLabel;
+    g1: TGauge;
+    g2: TGauge;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
@@ -29,10 +30,10 @@ procedure TForm1.FormCreate(Sender: TObject);
 var
   Work:TWorkProc;
 begin
-  g1.MaxValue:=1000;
-  g1.Progress:=0;
   Work:=TWorkProc.Create(true);
   Work.Resume;
+
+  
 end;
 
 end.
