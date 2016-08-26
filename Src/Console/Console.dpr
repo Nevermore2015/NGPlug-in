@@ -12,7 +12,9 @@ uses
   GD_Utils in '..\Inc\GD_Utils.pas',
   MD5 in '..\Inc\MD5.pas',
   UGlobal in 'UGlobal.pas',
-  UCheckVersion in 'UCheckVersion.pas';
+  UCheckVersion in 'UCheckVersion.pas',
+  superobject in '..\Inc\superobject.pas',
+  UGameAddrManager in 'UGameAddrManager.pas';
 
 {$R *.res}
 var
@@ -36,17 +38,16 @@ begin
                         Application.Initialize;
                         Application.MainFormOnTaskbar := True;
                         Application.CreateForm(TMainForm, MainForm);
-                        MainForm.Caption:=ConsoleTitle;
+  MainForm.Caption:=ConsoleTitle;
                         Application.Run;
                       end;
                     1:begin
                         if MessageBox(0,'有新版本需要更新','更新提示',MB_OKCANCEL) = ID_OK then
                           begin
-                            WinExec(PChar(Format('.\Update.exe %d %s',[ConsoleVersion,Config.UpdateUrl])),SW_NORMAL);
+                            WinExec(PChar(Format('.\Update.exe %d',[ConsoleVersion])),SW_NORMAL);
                           end;
                       end;
                     2:begin
-                        WinExec(PChar(Format('.\Update.exe %d %s',[ConsoleVersion,Config.UpdateUrl])),SW_NORMAL);
                         MessageBox(0,'版本校验出错','错误',0);
                       end;
                   end;

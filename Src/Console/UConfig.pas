@@ -5,8 +5,7 @@ uses
   windows,IniFiles,SysUtils;
 const
   C_ROOT = 'system';
-  C_VERSION_CHECK = 'VersionUrl';
-  C_UPDATE_URL = 'UpdateUrl';
+
 type
   TConfig = class
     private
@@ -15,8 +14,7 @@ type
       mCfgPath:String;          //配置文件完整路径
       mFileName:String;
       mIni:TIniFile;
-      function GetUpdateUrl: String;
-    function GetCheckUrl: String;
+      function GetAuthUrl: String;
     public
       constructor Create(Handle:Cardinal;FileName:String);
       destructor Destroy;override;
@@ -24,10 +22,8 @@ type
       property Active:Bool read mActive;
       //模块目录
       property ModuleDir:String read mDir;
-      //下发更新地址
-      property UpdateUrl:String read GetUpdateUrl;
       //版本验证地址
-      property CheckUrl:String read GetCheckUrl;
+      property AuthUrl:String read GetAuthUrl;
   end;
 var
   Config:TConfig;
@@ -62,14 +58,9 @@ begin
   mIni.Free;
 end;
 
-function TConfig.GetCheckUrl: String;
+function TConfig.GetAuthUrl: String;
 begin
- Result:= mIni.ReadString(C_ROOT,C_VERSION_CHECK,'');
-end;
-
-function TConfig.GetUpdateUrl: String;
-begin
- Result:= mIni.ReadString(C_ROOT,C_UPDATE_URL,'');
+ Result:= mIni.ReadString(C_ROOT,'AuthUrl','');
 end;
 
 end.

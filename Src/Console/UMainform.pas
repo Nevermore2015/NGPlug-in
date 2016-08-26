@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ComCtrls, ExtCtrls,idhttp, Menus;
+  Dialogs, StdCtrls, ComCtrls, ExtCtrls, Menus,UGlobal,UCheckVersion;
 
 type
   TMainForm = class(TForm)
@@ -36,12 +36,14 @@ type
     N10: TMenuItem;
     N11: TMenuItem;
     N12: TMenuItem;
-    procedure SetAccountMeumItemClick(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure N12Click(Sender: TObject);
+    procedure N11Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
-    { Public declarations }
+    procedure Printf(Str:String;Args:Array of const);
   end;
 
 var
@@ -56,20 +58,41 @@ begin
   mmo1.Clear;
 end;
 
-procedure TMainForm.SetAccountMeumItemClick(Sender: TObject);
-var
-  H:TIdHTTP;
-  Str:TStringList;
+procedure TMainForm.FormCreate(Sender: TObject);
 begin
-  Str:=TStringList.Create;
-  H:=TIdHTTP.Create(nil);
-  try
-    mmo1.Lines.Add(H.Post('http://devincubator.stcsm.gov.cn/fhq-web/user/getUserInfo.json',Str));
-  finally
-    Str.Free;
-    H.Free;
-  end;
+  //auth check
 
+  
+end;
+
+procedure TMainForm.N11Click(Sender: TObject);
+begin
+case CheckVersion() of
+  0:begin
+      MessageBox(0,'当前版本为最新!','信息',0);
+    end;
+  1:begin
+      if MessageBox(0,'有新版本需要更新,是否立即更新?','更新提示',MB_OKCANCEL) = ID_OK then
+        begin
+          WinExec(PChar(Format('.\Update.exe %d',[ConsoleVersion])),SW_NORMAL);
+          self.Close;
+        end;
+    end;
+  2:begin
+      MessageBox(0,'版本校验出错','信息',0);
+    end;
+end;
+
+end;
+
+procedure TMainForm.N12Click(Sender: TObject);
+begin
+  MessageBox(0,Pchar(Format('当前版本号:%d',[ConsoleVersion])),'版本',0);
+end;
+
+procedure TMainForm.Printf(Str: String; Args: array of const);
+begin
+  mmo1.Lines.Add(Format(Str,Args));
 end;
 
 end.
