@@ -178,9 +178,10 @@
 			<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
 			<VersionInfoKeys Name="Comments">By Yoie</VersionInfoKeys>
 		</VersionInfoKeys>
-		<buildevents/>  <Excluded_Packages>
+		<buildevents/>
+		<Excluded_Packages>
       <Excluded_Packages Name="$(BDS)\bin\dcloffice2k100.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
       <Excluded_Packages Name="$(BDS)\bin\dclofficexp100.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
     </Excluded_Packages>
-  </Delphi.Personality>
+	</Delphi.Personality>
 </BorlandProject>

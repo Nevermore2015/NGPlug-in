@@ -2214,6 +2214,8 @@ object MainForm: TMainForm
           Height = 153
           Align = alClient
           Color = clMoneyGreen
+          Ctl3D = False
+          ParentCtl3D = False
           ScrollBars = ssVertical
           TabOrder = 0
         end
@@ -2286,6 +2288,14 @@ object MainForm: TMainForm
       TabOrder = 5
       OnClick = btn3Click
     end
+    object chk1: TCheckBox
+      Left = 648
+      Top = 20
+      Width = 73
+      Height = 17
+      Caption = #20351#29992#20195#29702
+      TabOrder = 6
+    end
   end
   object mm1: TMainMenu
     AutoHotkeys = maManual
@@ -2315,11 +2325,32 @@ object MainForm: TMainForm
       object N7: TMenuItem
         Caption = #25346#26426#36719#20214#37197#32622
       end
+      object Socket1: TMenuItem
+        Caption = #25346#26426#20195#29702#37197#32622
+      end
+      object N13: TMenuItem
+        Caption = #25346#26426#20195#31572#37197#32622
+      end
     end
     object N8: TMenuItem
       Caption = #25480#26435
       object N9: TMenuItem
         Caption = #26597#35810#25480#26435#20449#24687
+      end
+    end
+    object N14: TMenuItem
+      Caption = #26085#24535
+      object N15: TMenuItem
+        Caption = #25346#26426#26085#24535
+      end
+      object N16: TMenuItem
+        Caption = #20135#37327#32479#35745
+      end
+      object N17: TMenuItem
+        Caption = '-'
+      end
+      object N18: TMenuItem
+        Caption = #31995#32479#30417#25511
       end
     end
     object N10: TMenuItem
