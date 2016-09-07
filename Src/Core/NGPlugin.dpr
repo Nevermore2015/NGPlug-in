@@ -44,7 +44,7 @@ begin
   //HOOK
   StartHook();
   //隐藏模块
-  HideSelf();
+ // HideSelf();
   //引擎入口
   GameMain();
 end.

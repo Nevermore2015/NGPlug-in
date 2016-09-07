@@ -12,6 +12,8 @@ type
         mServer:Integer;
       public
          constructor Create(_Account,_PassWord:String;_Server:Integer);
+
+         //function StartGame();
     end;
 implementation
 

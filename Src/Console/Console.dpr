@@ -14,7 +14,8 @@ uses
   UGlobal in 'UGlobal.pas',
   UCheckVersion in 'UCheckVersion.pas',
   superobject in '..\Inc\superobject.pas',
-  UGameAddrManager in 'UGameAddrManager.pas';
+  UGameAddrManager in 'UGameAddrManager.pas',
+  UInject in '..\Inc\UInject.pas';
 
 {$R *.res}
 var
