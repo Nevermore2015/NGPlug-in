@@ -36,6 +36,14 @@ type
     N10: TMenuItem;
     N11: TMenuItem;
     N12: TMenuItem;
+    chk1: TCheckBox;
+    Socket1: TMenuItem;
+    N13: TMenuItem;
+    N14: TMenuItem;
+    N15: TMenuItem;
+    N16: TMenuItem;
+    N17: TMenuItem;
+    N18: TMenuItem;
     procedure btn3Click(Sender: TObject);
     procedure N12Click(Sender: TObject);
     procedure N11Click(Sender: TObject);
@@ -61,11 +69,16 @@ end;
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   //auth check
+<<<<<<< HEAD
   if EnableDebugPriv then
     begin
       Printf('Æô¶¯³É¹¦!',[]);
     end;
   
+=======
+
+
+>>>>>>> d20b27c468568bfd7616de3151b2f8e345981d10
 end;
 
 procedure TMainForm.N11Click(Sender: TObject);
