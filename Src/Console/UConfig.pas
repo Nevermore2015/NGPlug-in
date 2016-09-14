@@ -5,7 +5,7 @@ uses
   windows,IniFiles,SysUtils;
 const
   C_ROOT = 'system';
-
+  C_GAME = 'game';
 type
   TConfig = class
     private
@@ -15,6 +15,8 @@ type
       mFileName:String;
       mIni:TIniFile;
       function GetAuthUrl: String;
+    function GetGameBin: string;
+    function GetGameId: Integer;
     public
       constructor Create(Handle:Cardinal;FileName:String);
       destructor Destroy;override;
@@ -24,6 +26,10 @@ type
       property ModuleDir:String read mDir;
       //版本验证地址
       property AuthUrl:String read GetAuthUrl;
+      //
+      property GameBin:string read GetGameBin;
+
+      property GameId:Integer read GetGameId;
   end;
 var
   Config:TConfig;
@@ -61,6 +67,16 @@ end;
 function TConfig.GetAuthUrl: String;
 begin
  Result:= mIni.ReadString(C_ROOT,'AuthUrl','');
+end;
+
+function TConfig.GetGameBin: string;
+begin
+ Result:= mIni.ReadString(C_GAME,'GameBin','');
+end;
+
+function TConfig.GetGameId: Integer;
+begin
+ Result:= mIni.ReadInteger(C_GAME,'GameId',0);
 end;
 
 end.

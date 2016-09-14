@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ComCtrls, ExtCtrls, Menus,UGlobal,UCheckVersion;
+  Dialogs, StdCtrls, ComCtrls, ExtCtrls, Menus,UGlobal,UCheckVersion,UInject;
 
 type
   TMainForm = class(TForm)
@@ -69,8 +69,16 @@ end;
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   //auth check
+<<<<<<< HEAD
+  if EnableDebugPriv then
+    begin
+      Printf('Æô¶¯³É¹¦!',[]);
+    end;
+  
+=======
 
 
+>>>>>>> d20b27c468568bfd7616de3151b2f8e345981d10
 end;
 
 procedure TMainForm.N11Click(Sender: TObject);
