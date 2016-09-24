@@ -2,15 +2,15 @@ unit UGameDbgForm;
 
 interface
 uses
-   UGameObjBase;
+   UHandleObject,UProtocol;
 
 type
-   TGameDbgForm = class(TGameObjBase)
+   TGameDbgForm = class(THandleObjct)
      public
        constructor Create();
 
-       Procedure OnRecv(pBuffer:Pointer;Len:Cardinal);override;
-       Procedure OnSend(pBuffer:Pointer;Len:Cardinal);override;
+       Procedure OnRecv(_PacketObject:PPacketObject);override;
+       Procedure OnSend(_PacketObject:PPacketObject);override;
    end;
 
 var
@@ -25,16 +25,16 @@ begin
   inherited Create('DbgForm');
 end;
 
-procedure TGameDbgForm.OnRecv(pBuffer: Pointer; Len: Cardinal);
+procedure TGameDbgForm.OnRecv(_PacketObject:PPacketObject);
 begin
-  DbgForm.OnRecv(pBuffer,Len);
+  DbgForm.OnRecv(_PacketObject.pBuffer,_PacketObject.BufferSize);
 end;
 
 
 
-procedure TGameDbgForm.OnSend(pBuffer: Pointer; Len: Cardinal);
+procedure TGameDbgForm.OnSend(_PacketObject:PPacketObject);
 begin
-  DbgForm.OnSend(pBuffer,Len);
+  DbgForm.OnSend(_PacketObject.pBuffer,_PacketObject.BufferSize);
 end;
 
 initialization

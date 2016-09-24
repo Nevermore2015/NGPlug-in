@@ -16,20 +16,20 @@ uses
   UGameTest in 'Customer\GamePacket\UGameTest.pas',
   UDemoScript in 'Customer\Script\UDemoScript.pas',
   UGameHook in 'Customer\Hook\UGameHook.pas',
-  UGamePacket in 'Engine\Comm\UGamePacket.pas',
-  UPacketManager in 'Engine\Comm\UPacketManager.pas',
   UDbgForm in 'Engine\DbgForm\UDbgForm.pas' {DbgForm},
   UGameDbgForm in 'Engine\DbgForm\UGameDbgForm.pas',
   UConfig in 'Engine\Config\UConfig.pas',
   UGameMain in 'Engine\Game\UGameMain.pas',
-  UGameObjBase in 'Engine\Game\UGameObjBase.pas',
   UGameUpdate in 'Engine\Game\UGameUpdate.pas',
   Lua in 'Engine\Script\Lua.pas',
   LuaLib in 'Engine\Script\LuaLib.pas',
   LuaMain in 'Engine\Script\LuaMain.pas',
   UGameScriptBase in 'Engine\Script\UGameScriptBase.pas',
   ULuaEngine in 'Engine\Script\ULuaEngine.pas',
-  UScriptThread in 'Engine\Script\UScriptThread.pas';
+  UScriptThread in 'Engine\Script\UScriptThread.pas',
+  UProtocol in 'Customer\UProtocol.pas',
+  UHandleObject in 'Engine\GamePacketCore\UHandleObject.pas',
+  UPacketManager in 'Engine\GamePacketCore\UPacketManager.pas';
 
 {$R *.res}
 

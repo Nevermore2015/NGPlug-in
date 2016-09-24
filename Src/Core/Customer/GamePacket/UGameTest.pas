@@ -2,17 +2,17 @@ unit UGameTest;
 
 interface
 uses
-   UGameObjBase,UDemoScript;
+   UHandleObject,UDemoScript,UProtocol;
 
 type
-   TGameTest = class(TGameObjBase)
+   TGameTest = class(THandleObjct)
      private
        DemoScript:TDemoScript;
      public
        constructor Create();
 
-       Procedure OnRecv(pBuffer:Pointer;Len:Cardinal);override;
-       Procedure OnSend(pBuffer:Pointer;Len:Cardinal);override;
+       //Procedure OnRecv(_PacketObject:PPacketObject);override;
+       //Procedure OnSend(_PacketObject:PPacketObject);override;
    end;
 
 var
@@ -27,19 +27,19 @@ begin
   inherited Create('Test Handle');
   DemoScript:=TDemoScript.Create;
 end;
-
-procedure TGameTest.OnRecv(pBuffer: Pointer; Len: Cardinal);
+{
+procedure TGameTest.OnRecv(_PacketObject:PPacketObject);
 begin
   Dbgprint('rrrrr',[]);
 end;
 
 
 
-procedure TGameTest.OnSend(pBuffer: Pointer; Len: Cardinal);
+procedure TGameTest.OnSend(_PacketObject:PPacketObject);
 begin
   Dbgprint('sssss',[]);
 
-end;
+end;   }
 
 initialization
    GameTest:=TGameTest.Create;

@@ -2,7 +2,7 @@ unit UGameHook;
 
 interface
 uses
-  Windows,UHookLib;
+  Windows,UHookLib,UProtocol;
 
 type
   FAPIPacketEx = Function (SocketId:Cardinal;pBuffer:Pointer;Len:Cardinal;Flag:Cardinal):Integer;stdcall;
@@ -21,13 +21,26 @@ implementation
 uses
   UPacketManager,GD_Utils;
 
+function MakePacketObject(PacketType:Cardinal;p:Pointer;Len:Cardinal):PPacketObject;
+var
+  PacketObject:TPacketObject;
+begin
+  PacketObject.pBuffer:=p;
+  PacketObject.BufferSize:=Len;
+  case PacketType of
+     C_SEND_PACKET:
+       Packet.OnSendHandle(@PacketObject);
+     C_RECV_PACKET:
+       Packet.OnRecvHandle(@PacketObject);
+  end;
+end;
 
 Function OnMySend(pBuffer:Pointer;Len:Integer):Integer;Stdcall;
 begin
   asm
     Mov _GameSendEcx,Ecx
   end;
-  Packet.OnSendHandle(pBuffer,Len);
+  MakePacketObject(C_SEND_PACKET,pBuffer,Len);
   asm
     Mov Ecx,_GameSendEcx
   end;
@@ -37,25 +50,16 @@ end;
 Function OnMyRecv(pBuffer:Pointer;Len:Integer):Integer;Stdcall;
 begin
   Result:=pOldGameRecv(pBuffer,Len);
-  Packet.OnRecvHandle(pBuffer,Len);
+  MakePacketObject(C_RECV_PACKET,pBuffer,Len);
 end;
 
 
-Function MyApiSend(SocketId:Cardinal;pBuffer:Pointer;Len:Cardinal;Flag:Cardinal):Integer;stdcall;
-begin
-  Packet.OnSendHandle(pBuffer,Len);
-  Result:=pWs_Send(SocketId,pBuffer,Len,Flag);
-end;
 
 Procedure StartHook();
 var
   Res:Bool;
 begin
-  Res:=HookApi('ws2_32.dll','send',@MyApiSend,@pWs_Send);
-
-
-  if Res then
-    LogPrintf('Execute Hook Proc Success',[]);
+  LogPrintf('Execute Hook Proc Success',[]);
 end;
 
 end.
