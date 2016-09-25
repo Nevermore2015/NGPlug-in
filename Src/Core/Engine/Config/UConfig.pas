@@ -4,8 +4,7 @@ interface
 uses
   windows,IniFiles,SysUtils;
 const
-  C_ROOT = 'root';
-  C_UPDATE_URL = 'UpdateUrl';
+  C_ROOT = 'NgPlugin';
 type
   TConfig = class
     private
@@ -14,7 +13,8 @@ type
       mCfgPath:String;          //配置文件完整路径
       mFileName:String;
       mIni:TIniFile;
-      function GetUpdateUrl: String;
+      function GetIp: String;
+      function GetPort: Integer;
     public
       constructor Create(Handle:Cardinal;FileName:String);
       destructor Destroy;override;
@@ -22,8 +22,9 @@ type
       property Active:Bool read mActive;
       //模块目录
       property ModuleDir:String read mDir;
-      //下发更新地址
-      property UpdateUrl:String read GetUpdateUrl;
+      //控制台IP,端口
+      property ConsoleIp:String read GetIp;
+      property ConsolePort:Integer read GetPort;
   end;
 var
   Config:TConfig;
@@ -58,9 +59,14 @@ begin
   mIni.Free;
 end;
 
-function TConfig.GetUpdateUrl: String;
+function TConfig.GetIp: String;
 begin
- Result:= mIni.ReadString(C_ROOT,C_UPDATE_URL,'');
+  Result:=mIni.ReadString(C_ROOT,'Ip','');
+end;
+
+function TConfig.GetPort: Integer;
+begin
+  Result:=mIni.ReadInteger(C_ROOT,'Port',0);
 end;
 
 end.

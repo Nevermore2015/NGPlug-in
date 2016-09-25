@@ -7,12 +7,12 @@ uses
 type
    TGameTest = class(THandleObjct)
      private
-       DemoScript:TDemoScript;
+       //
      public
        constructor Create();
 
-       //Procedure OnRecv(_PacketObject:PPacketObject);override;
-       //Procedure OnSend(_PacketObject:PPacketObject);override;
+       Procedure OnRecv(_PacketObject:PPacketObject);override;
+       Procedure OnSend(_PacketObject:PPacketObject);override;
    end;
 
 var
@@ -25,9 +25,9 @@ uses
 constructor TGameTest.Create;
 begin
   inherited Create('Test Handle');
-  DemoScript:=TDemoScript.Create;
+
 end;
-{
+
 procedure TGameTest.OnRecv(_PacketObject:PPacketObject);
 begin
   Dbgprint('rrrrr',[]);
@@ -39,7 +39,7 @@ procedure TGameTest.OnSend(_PacketObject:PPacketObject);
 begin
   Dbgprint('sssss',[]);
 
-end;   }
+end;   
 
 initialization
    GameTest:=TGameTest.Create;

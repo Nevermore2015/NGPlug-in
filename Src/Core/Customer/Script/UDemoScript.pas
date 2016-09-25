@@ -13,6 +13,10 @@ type
       constructor Create();
   end;
 {$M-}
+
+
+var
+  g_DemoScript:TDemoScript;
 implementation
 
 { TDemoScript }
@@ -30,4 +34,6 @@ begin
   Result:=0;
 end;
 
+initialization
+  g_DemoScript:=TDemoScript.Create;
 end.

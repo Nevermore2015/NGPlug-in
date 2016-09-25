@@ -8,233 +8,124 @@
   resources were bound to the produced executable.
 */
 
-#define IdResourceStringsProtocols_RSHTTPAuthAlreadyRegistered 65184
-#define IdResourceStringsProtocols_RSURINoProto 65185
-#define IdResourceStringsProtocols_RSURINoHost 65186
-#define IdResourceStringsCore_RSIdNoDataToRead 65200
-#define IdResourceStringsCore_RSReadTimeout 65201
-#define IdResourceStringsCore_RSReadLnMaxLineLengthExceeded 65202
-#define IdResourceStringsCore_RSConnectTimeout 65203
-#define IdResourceStringsCore_RSAlreadyConnected 65204
-#define IdResourceStringsCore_RSMaximumNumberOfCaptureLineExceeded 65205
-#define IdResourceStringsCore_RSTransparentProxyCannotBind 65206
-#define IdResourceStringsCore_RSTransparentProxyCanNotSupportUDP 65207
-#define IdResourceStringsCore_RSBufferMissingTerminator 65208
-#define IdResourceStringsCore_RSBufferInvalidStartPos 65209
-#define IdResourceStringsCore_RSReplyInvalidCode 65210
-#define IdResourceStringsProtocols_RSIOHandlerPropInvalid 65211
-#define IdResourceStringsProtocols_RSHTTPChunkStarted 65212
-#define IdResourceStringsProtocols_RSHTTPNotAcceptable 65213
-#define IdResourceStringsProtocols_RSHTTPUnknownProtocol 65214
-#define IdResourceStringsProtocols_RSHTTPMethodRequiresVersion 65215
-#define IdResourceStringsCore_RSSocksAuthMethodError 65216
-#define IdResourceStringsCore_RSSocksAuthError 65217
-#define IdResourceStringsCore_RSSocksServerGeneralError 65218
-#define IdResourceStringsCore_RSSocksServerPermissionError 65219
-#define IdResourceStringsCore_RSSocksServerNetUnreachableError 65220
-#define IdResourceStringsCore_RSSocksServerHostUnreachableError 65221
-#define IdResourceStringsCore_RSSocksServerConnectionRefusedError 65222
-#define IdResourceStringsCore_RSSocksServerTTLExpiredError 65223
-#define IdResourceStringsCore_RSSocksServerCommandError 65224
-#define IdResourceStringsCore_RSSocksServerAddressError 65225
-#define IdResourceStringsCore_RSInterceptCircularLink 65226
-#define IdResourceStringsCore_RSNotEnoughDataInBuffer 65227
-#define IdResourceStringsCore_RSTooMuchDataInBuffer 65228
-#define IdResourceStringsCore_RSFileNotFound 65229
-#define IdResourceStringsCore_RSNotConnected 65230
-#define IdResourceStringsCore_RSObjectTypeNotSupported 65231
-#define IdResourceStrings_RSConnectionClosedGracefully 65232
-#define IdResourceStrings_RSCouldNotBindSocket 65233
-#define IdResourceStrings_RSInvalidPortRange 65234
-#define IdResourceStrings_RSInvalidServiceName 65235
-#define IdResourceStrings_RSIPv6Unavailable 65236
-#define IdResourceStrings_RSInvalidIPv6Address 65237
-#define IdResourceStrings_RSIPVersionUnsupported 65238
-#define IdResourceStrings_RSNotAllBytesSent 65239
-#define IdResourceStrings_RSPackageSizeTooBig 65240
-#define IdResourceStrings_RSSetSizeExceeded 65241
-#define IdResourceStringsCore_RSSocksUDPNotSupported 65242
-#define IdResourceStringsCore_RSSocksRequestFailed 65243
-#define IdResourceStringsCore_RSSocksRequestServerFailed 65244
-#define IdResourceStringsCore_RSSocksRequestIdentFailed 65245
-#define IdResourceStringsCore_RSSocksUnknownError 65246
-#define IdResourceStringsCore_RSSocksServerRespondError 65247
-#define IdResourceStrings_RSStackENOTCONN 65248
-#define IdResourceStrings_RSStackESHUTDOWN 65249
-#define IdResourceStrings_RSStackETOOMANYREFS 65250
-#define IdResourceStrings_RSStackETIMEDOUT 65251
-#define IdResourceStrings_RSStackECONNREFUSED 65252
-#define IdResourceStrings_RSStackELOOP 65253
-#define IdResourceStrings_RSStackENAMETOOLONG 65254
-#define IdResourceStrings_RSStackEHOSTDOWN 65255
-#define IdResourceStrings_RSStackEHOSTUNREACH 65256
-#define IdResourceStrings_RSStackENOTEMPTY 65257
-#define IdResourceStrings_RSStackHOST_NOT_FOUND 65258
-#define IdResourceStrings_RSStackClassUndefined 65259
-#define IdResourceStrings_RSStackAlreadyCreated 65260
-#define IdResourceStrings_RSAntiFreezeOnlyOne 65261
-#define IdResourceStrings_RSCannotSetIPVersionWhenConnected 65262
-#define IdResourceStrings_RSCannotBindRange 65263
-#define IdResourceStrings_RSStackEPROTOTYPE 65264
-#define IdResourceStrings_RSStackENOPROTOOPT 65265
-#define IdResourceStrings_RSStackEPROTONOSUPPORT 65266
-#define IdResourceStrings_RSStackESOCKTNOSUPPORT 65267
-#define IdResourceStrings_RSStackEOPNOTSUPP 65268
-#define IdResourceStrings_RSStackEPFNOSUPPORT 65269
-#define IdResourceStrings_RSStackEAFNOSUPPORT 65270
-#define IdResourceStrings_RSStackEADDRINUSE 65271
-#define IdResourceStrings_RSStackEADDRNOTAVAIL 65272
-#define IdResourceStrings_RSStackENETDOWN 65273
-#define IdResourceStrings_RSStackENETUNREACH 65274
-#define IdResourceStrings_RSStackENETRESET 65275
-#define IdResourceStrings_RSStackECONNABORTED 65276
-#define IdResourceStrings_RSStackECONNRESET 65277
-#define IdResourceStrings_RSStackENOBUFS 65278
-#define IdResourceStrings_RSStackEISCONN 65279
-#define IdResourceStrings_RSStatusDisconnecting 65280
-#define IdResourceStrings_RSStatusDisconnected 65281
-#define IdResourceStrings_RSStatusText 65282
-#define IdResourceStrings_RSStackError 65283
-#define IdResourceStrings_RSStackEINTR 65284
-#define IdResourceStrings_RSStackEBADF 65285
-#define IdResourceStrings_RSStackEACCES 65286
-#define IdResourceStrings_RSStackEFAULT 65287
-#define IdResourceStrings_RSStackEINVAL 65288
-#define IdResourceStrings_RSStackEMFILE 65289
-#define IdResourceStrings_RSStackEWOULDBLOCK 65290
-#define IdResourceStrings_RSStackEINPROGRESS 65291
-#define IdResourceStrings_RSStackEALREADY 65292
-#define IdResourceStrings_RSStackENOTSOCK 65293
-#define IdResourceStrings_RSStackEDESTADDRREQ 65294
-#define IdResourceStrings_RSStackEMSGSIZE 65295
-#define HelpIntfs_hNoTopics 65296
-#define ComStrs_sTabFailClear 65297
-#define ComStrs_sTabFailDelete 65298
-#define ComStrs_sTabFailRetrieve 65299
-#define ComStrs_sTabFailGetObject 65300
-#define ComStrs_sTabFailSet 65301
-#define ComStrs_sTabFailSetObject 65302
-#define ComStrs_sTabMustBeMultiLine 65303
-#define ComStrs_sPageIndexError 65304
-#define IdResourceStrings_RSFailedTimeZoneInfo 65305
-#define IdResourceStrings_RSWinsockCallError 65306
-#define IdResourceStrings_RSWinsockLoadError 65307
-#define IdResourceStrings_RSWinsockInitializationError 65308
-#define IdResourceStrings_RSStatusResolving 65309
-#define IdResourceStrings_RSStatusConnecting 65310
-#define IdResourceStrings_RSStatusConnected 65311
-#define Consts_SDockedCtlNeedsName 65312
-#define Consts_SDockTreeRemoveError 65313
-#define Consts_SDockZoneNotFound 65314
-#define Consts_SDockZoneHasNoCtl 65315
-#define Consts_SDockZoneVersionConflict 65316
-#define Consts_SANSIEncoding 65317
-#define Consts_SASCIIEncoding 65318
-#define Consts_SUnicodeEncoding 65319
-#define Consts_SBigEndianEncoding 65320
-#define Consts_SUTF8Encoding 65321
-#define Consts_SUTF7Encoding 65322
-#define Consts_SPageControlNotSet 65323
-#define HelpIntfs_hNoTableOfContents 65324
-#define HelpIntfs_hNothingFound 65325
-#define HelpIntfs_hNoContext 65326
-#define HelpIntfs_hNoContextFound 65327
-#define Consts_SmkcPgUp 65328
-#define Consts_SmkcPgDn 65329
-#define Consts_SmkcEnd 65330
-#define Consts_SmkcHome 65331
-#define Consts_SmkcLeft 65332
-#define Consts_SmkcUp 65333
-#define Consts_SmkcRight 65334
-#define Consts_SmkcDown 65335
-#define Consts_SmkcIns 65336
-#define Consts_SmkcDel 65337
-#define Consts_SmkcShift 65338
-#define Consts_SmkcCtrl 65339
-#define Consts_SmkcAlt 65340
-#define Consts_SIconToClipboard 65341
-#define Consts_SInvalidMemoSize 65342
-#define Consts_SDuplicateMenus 65343
-#define Consts_SMsgDlgYes 65344
-#define Consts_SMsgDlgNo 65345
-#define Consts_SMsgDlgOK 65346
-#define Consts_SMsgDlgCancel 65347
-#define Consts_SMsgDlgHelp 65348
-#define Consts_SMsgDlgAbort 65349
-#define Consts_SMsgDlgRetry 65350
-#define Consts_SMsgDlgIgnore 65351
-#define Consts_SMsgDlgAll 65352
-#define Consts_SMsgDlgNoToAll 65353
-#define Consts_SMsgDlgYesToAll 65354
-#define Consts_SmkcBkSp 65355
-#define Consts_SmkcTab 65356
-#define Consts_SmkcEsc 65357
-#define Consts_SmkcEnter 65358
-#define Consts_SmkcSpace 65359
-#define Consts_SControlParentSetToSelf 65360
-#define Consts_SOKButton 65361
-#define Consts_SCancelButton 65362
-#define Consts_SYesButton 65363
-#define Consts_SNoButton 65364
-#define Consts_SHelpButton 65365
-#define Consts_SCloseButton 65366
-#define Consts_SIgnoreButton 65367
-#define Consts_SRetryButton 65368
-#define Consts_SAbortButton 65369
-#define Consts_SAllButton 65370
-#define Consts_SCannotDragForm 65371
-#define Consts_SMsgDlgWarning 65372
-#define Consts_SMsgDlgError 65373
-#define Consts_SMsgDlgInformation 65374
-#define Consts_SMsgDlgConfirm 65375
-#define Consts_SImageWriteFail 65376
-#define Consts_SWindowDCError 65377
-#define Consts_SWindowClass 65378
-#define Consts_SCannotFocus 65379
-#define Consts_SParentRequired 65380
-#define Consts_SParentGivenNotAParent 65381
-#define Consts_SMDIChildNotVisible 65382
-#define Consts_SVisibleChanged 65383
-#define Consts_SCannotShowModal 65384
-#define Consts_SPropertyOutOfRange 65385
-#define Consts_SMenuIndexError 65386
-#define Consts_SMenuReinserted 65387
-#define Consts_SMenuNotFound 65388
-#define Consts_SNoTimers 65389
-#define Consts_SGroupIndexTooLow 65390
-#define Consts_SNoMDIForm 65391
-#define RTLConsts_SUnknownProperty 65392
-#define RTLConsts_SWriteError 65393
-#define RTLConsts_SThreadCreateError 65394
-#define RTLConsts_SThreadError 65395
-#define Consts_SInvalidTabPosition 65396
-#define Consts_SInvalidTabStyle 65397
-#define Consts_SInvalidBitmap 65398
-#define Consts_SInvalidIcon 65399
-#define Consts_SChangeIconSize 65400
-#define Consts_SUnknownClipboardFormat 65401
-#define Consts_SOutOfResources 65402
-#define Consts_SNoCanvasHandle 65403
-#define Consts_SInvalidImageSize 65404
-#define Consts_SInvalidImageList 65405
-#define Consts_SImageIndexError 65406
-#define Consts_SImageReadFail 65407
-#define RTLConsts_SInvalidProperty 65408
-#define RTLConsts_SInvalidPropertyPath 65409
-#define RTLConsts_SInvalidPropertyValue 65410
-#define RTLConsts_SInvalidRegType 65411
-#define RTLConsts_SListCapacityError 65412
-#define RTLConsts_SListCountError 65413
-#define RTLConsts_SListIndexError 65414
-#define RTLConsts_SMemoryStreamError 65415
-#define RTLConsts_SPropertyException 65416
-#define RTLConsts_SReadError 65417
-#define RTLConsts_SReadOnlyProperty 65418
-#define RTLConsts_SRegGetDataFailed 65419
-#define RTLConsts_SResNotFound 65420
-#define RTLConsts_SSeekNotImplemented 65421
-#define RTLConsts_SSortedListError 65422
-#define RTLConsts_SUnknownGroup 65423
+#define ComStrs_sTabFailRetrieve 65296
+#define ComStrs_sTabFailGetObject 65297
+#define ComStrs_sTabFailSet 65298
+#define ComStrs_sTabFailSetObject 65299
+#define ComStrs_sTabMustBeMultiLine 65300
+#define ComStrs_sPageIndexError 65301
+#define Consts_SDockZoneHasNoCtl 65312
+#define Consts_SDockZoneVersionConflict 65313
+#define Consts_SANSIEncoding 65314
+#define Consts_SASCIIEncoding 65315
+#define Consts_SUnicodeEncoding 65316
+#define Consts_SBigEndianEncoding 65317
+#define Consts_SUTF8Encoding 65318
+#define Consts_SUTF7Encoding 65319
+#define Consts_SPageControlNotSet 65320
+#define HelpIntfs_hNoTableOfContents 65321
+#define HelpIntfs_hNothingFound 65322
+#define HelpIntfs_hNoContext 65323
+#define HelpIntfs_hNoContextFound 65324
+#define HelpIntfs_hNoTopics 65325
+#define ComStrs_sTabFailClear 65326
+#define ComStrs_sTabFailDelete 65327
+#define Consts_SmkcHome 65328
+#define Consts_SmkcLeft 65329
+#define Consts_SmkcUp 65330
+#define Consts_SmkcRight 65331
+#define Consts_SmkcDown 65332
+#define Consts_SmkcIns 65333
+#define Consts_SmkcDel 65334
+#define Consts_SmkcShift 65335
+#define Consts_SmkcCtrl 65336
+#define Consts_SmkcAlt 65337
+#define Consts_SIconToClipboard 65338
+#define Consts_SInvalidMemoSize 65339
+#define Consts_SDuplicateMenus 65340
+#define Consts_SDockedCtlNeedsName 65341
+#define Consts_SDockTreeRemoveError 65342
+#define Consts_SDockZoneNotFound 65343
+#define Consts_SMsgDlgCancel 65344
+#define Consts_SMsgDlgHelp 65345
+#define Consts_SMsgDlgAbort 65346
+#define Consts_SMsgDlgRetry 65347
+#define Consts_SMsgDlgIgnore 65348
+#define Consts_SMsgDlgAll 65349
+#define Consts_SMsgDlgNoToAll 65350
+#define Consts_SMsgDlgYesToAll 65351
+#define Consts_SmkcBkSp 65352
+#define Consts_SmkcTab 65353
+#define Consts_SmkcEsc 65354
+#define Consts_SmkcEnter 65355
+#define Consts_SmkcSpace 65356
+#define Consts_SmkcPgUp 65357
+#define Consts_SmkcPgDn 65358
+#define Consts_SmkcEnd 65359
+#define Consts_SYesButton 65360
+#define Consts_SNoButton 65361
+#define Consts_SHelpButton 65362
+#define Consts_SCloseButton 65363
+#define Consts_SIgnoreButton 65364
+#define Consts_SRetryButton 65365
+#define Consts_SAbortButton 65366
+#define Consts_SAllButton 65367
+#define Consts_SCannotDragForm 65368
+#define Consts_SMsgDlgWarning 65369
+#define Consts_SMsgDlgError 65370
+#define Consts_SMsgDlgInformation 65371
+#define Consts_SMsgDlgConfirm 65372
+#define Consts_SMsgDlgYes 65373
+#define Consts_SMsgDlgNo 65374
+#define Consts_SMsgDlgOK 65375
+#define Consts_SCannotFocus 65376
+#define Consts_SParentRequired 65377
+#define Consts_SParentGivenNotAParent 65378
+#define Consts_SMDIChildNotVisible 65379
+#define Consts_SVisibleChanged 65380
+#define Consts_SCannotShowModal 65381
+#define Consts_SPropertyOutOfRange 65382
+#define Consts_SMenuIndexError 65383
+#define Consts_SMenuReinserted 65384
+#define Consts_SMenuNotFound 65385
+#define Consts_SNoTimers 65386
+#define Consts_SGroupIndexTooLow 65387
+#define Consts_SNoMDIForm 65388
+#define Consts_SControlParentSetToSelf 65389
+#define Consts_SOKButton 65390
+#define Consts_SCancelButton 65391
+#define RTLConsts_SWriteError 65392
+#define Consts_SInvalidTabPosition 65393
+#define Consts_SInvalidTabStyle 65394
+#define Consts_SInvalidBitmap 65395
+#define Consts_SInvalidIcon 65396
+#define Consts_SChangeIconSize 65397
+#define Consts_SUnknownClipboardFormat 65398
+#define Consts_SOutOfResources 65399
+#define Consts_SNoCanvasHandle 65400
+#define Consts_SInvalidImageSize 65401
+#define Consts_SInvalidImageList 65402
+#define Consts_SImageIndexError 65403
+#define Consts_SImageReadFail 65404
+#define Consts_SImageWriteFail 65405
+#define Consts_SWindowDCError 65406
+#define Consts_SWindowClass 65407
+#define RTLConsts_SInvalidPropertyPath 65408
+#define RTLConsts_SInvalidPropertyValue 65409
+#define RTLConsts_SInvalidRegType 65410
+#define RTLConsts_SListCapacityError 65411
+#define RTLConsts_SListCountError 65412
+#define RTLConsts_SListIndexError 65413
+#define RTLConsts_SMemoryStreamError 65414
+#define RTLConsts_SPropertyException 65415
+#define RTLConsts_SReadError 65416
+#define RTLConsts_SReadOnlyProperty 65417
+#define RTLConsts_SRegGetDataFailed 65418
+#define RTLConsts_SResNotFound 65419
+#define RTLConsts_SSeekNotImplemented 65420
+#define RTLConsts_SSortedListError 65421
+#define RTLConsts_SUnknownGroup 65422
+#define RTLConsts_SUnknownProperty 65423
 #define SysConst_SLongDayNameSat 65424
 #define RTLConsts_SAncestorNotFound 65425
 #define RTLConsts_SAssignError 65426
@@ -349,124 +240,12 @@
 #define SysConst_SInvalidInput 65535
 STRINGTABLE
 BEGIN
-	IdResourceStringsProtocols_RSHTTPAuthAlreadyRegistered,	"This authentication method is already registered with class name %s."
-	IdResourceStringsProtocols_RSURINoProto,	"Protocol field is empty"
-	IdResourceStringsProtocols_RSURINoHost,	"Host field is empty"
-	IdResourceStringsCore_RSIdNoDataToRead,	"No data to read."
-	IdResourceStringsCore_RSReadTimeout,	"Read Timeout"
-	IdResourceStringsCore_RSReadLnMaxLineLengthExceeded,	"Max line length exceeded."
-	IdResourceStringsCore_RSConnectTimeout,	"Connect timed out."
-	IdResourceStringsCore_RSAlreadyConnected,	"Already connected."
-	IdResourceStringsCore_RSMaximumNumberOfCaptureLineExceeded,	"Maximum number of line allowed exceeded"
-	IdResourceStringsCore_RSTransparentProxyCannotBind,	"Transparent proxy cannot bind."
-	IdResourceStringsCore_RSTransparentProxyCanNotSupportUDP,	"UDP Not supported by this proxy."
-	IdResourceStringsCore_RSBufferMissingTerminator,	"Buffer terminator must be specified."
-	IdResourceStringsCore_RSBufferInvalidStartPos,	"Buffer start position is invalid."
-	IdResourceStringsCore_RSReplyInvalidCode,	"Reply Code is not valid: %s"
-	IdResourceStringsProtocols_RSIOHandlerPropInvalid,	"IOHandler value is not valid"
-	IdResourceStringsProtocols_RSHTTPChunkStarted,	"Chunk Started"
-	IdResourceStringsProtocols_RSHTTPNotAcceptable,	"Not Acceptable"
-	IdResourceStringsProtocols_RSHTTPUnknownProtocol,	"Unknown Protocol"
-	IdResourceStringsProtocols_RSHTTPMethodRequiresVersion,	"Request method requires HTTP version 1.1"
-	IdResourceStringsCore_RSSocksAuthMethodError,	"Invalid socks authentication method."
-	IdResourceStringsCore_RSSocksAuthError,	"Authentication error to socks server."
-	IdResourceStringsCore_RSSocksServerGeneralError,	"General SOCKS server failure."
-	IdResourceStringsCore_RSSocksServerPermissionError,	"Connection not allowed by ruleset."
-	IdResourceStringsCore_RSSocksServerNetUnreachableError,	"Network unreachable."
-	IdResourceStringsCore_RSSocksServerHostUnreachableError,	"Host unreachable."
-	IdResourceStringsCore_RSSocksServerConnectionRefusedError,	"Connection refused."
-	IdResourceStringsCore_RSSocksServerTTLExpiredError,	"TTL expired."
-	IdResourceStringsCore_RSSocksServerCommandError,	"Command not supported."
-	IdResourceStringsCore_RSSocksServerAddressError,	"Address type not supported."
-	IdResourceStringsCore_RSInterceptCircularLink,	"%d: Circular links are not allowed"
-	IdResourceStringsCore_RSNotEnoughDataInBuffer,	"Not enough data in buffer."
-	IdResourceStringsCore_RSTooMuchDataInBuffer,	"Too much data in buffer."
-	IdResourceStringsCore_RSFileNotFound,	"File \"%s\" not found"
-	IdResourceStringsCore_RSNotConnected,	"Not Connected"
-	IdResourceStringsCore_RSObjectTypeNotSupported,	"Object type not supported."
-	IdResourceStrings_RSConnectionClosedGracefully,	"Connection Closed Gracefully."
-	IdResourceStrings_RSCouldNotBindSocket,	"Could not bind socket. Address and port are already in use."
-	IdResourceStrings_RSInvalidPortRange,	"Invalid Port Range (%d - %d)"
-	IdResourceStrings_RSInvalidServiceName,	"%s is not a valid service."
-	IdResourceStrings_RSIPv6Unavailable,	"IPv6 unavailable"
-	IdResourceStrings_RSInvalidIPv6Address,	"%s is not a valid IPv6 address"
-	IdResourceStrings_RSIPVersionUnsupported,	"The requested IPVersion / Address family is not supported."
-	IdResourceStrings_RSNotAllBytesSent,	"Not all bytes sent."
-	IdResourceStrings_RSPackageSizeTooBig,	"Package Size Too Big."
-	IdResourceStrings_RSSetSizeExceeded,	"Set Size Exceeded."
-	IdResourceStringsCore_RSSocksUDPNotSupported,	"UDP is not support in this SOCKS version."
-	IdResourceStringsCore_RSSocksRequestFailed,	"Request rejected or failed."
-	IdResourceStringsCore_RSSocksRequestServerFailed,	"Request rejected because SOCKS server cannot connect."
-	IdResourceStringsCore_RSSocksRequestIdentFailed,	"Request rejected because the client program and identd report different user-ids."
-	IdResourceStringsCore_RSSocksUnknownError,	"Unknown socks error."
-	IdResourceStringsCore_RSSocksServerRespondError,	"Socks server did not respond."
-	IdResourceStrings_RSStackENOTCONN,	"Socket is not connected."
-	IdResourceStrings_RSStackESHUTDOWN,	"Cannot send or receive after socket is closed."
-	IdResourceStrings_RSStackETOOMANYREFS,	"Too many references, cannot splice."
-	IdResourceStrings_RSStackETIMEDOUT,	"Connection timed out."
-	IdResourceStrings_RSStackECONNREFUSED,	"Connection refused."
-	IdResourceStrings_RSStackELOOP,	"Too many levels of symbolic links."
-	IdResourceStrings_RSStackENAMETOOLONG,	"File name too long."
-	IdResourceStrings_RSStackEHOSTDOWN,	"Host is down."
-	IdResourceStrings_RSStackEHOSTUNREACH,	"No route to host."
-	IdResourceStrings_RSStackENOTEMPTY,	"Directory not empty"
-	IdResourceStrings_RSStackHOST_NOT_FOUND,	"Host not found."
-	IdResourceStrings_RSStackClassUndefined,	"Stack Class is undefined."
-	IdResourceStrings_RSStackAlreadyCreated,	"Stack already created."
-	IdResourceStrings_RSAntiFreezeOnlyOne,	"Only one TIdAntiFreeze can exist per application."
-	IdResourceStrings_RSCannotSetIPVersionWhenConnected,	"Cannot change IPVersion when connected"
-	IdResourceStrings_RSCannotBindRange,	"Can not bind in port range (%d - %d)"
-	IdResourceStrings_RSStackEPROTOTYPE,	"Protocol wrong type for socket."
-	IdResourceStrings_RSStackENOPROTOOPT,	"Bad protocol option."
-	IdResourceStrings_RSStackEPROTONOSUPPORT,	"Protocol not supported."
-	IdResourceStrings_RSStackESOCKTNOSUPPORT,	"Socket type not supported."
-	IdResourceStrings_RSStackEOPNOTSUPP,	"Operation not supported on socket."
-	IdResourceStrings_RSStackEPFNOSUPPORT,	"Protocol family not supported."
-	IdResourceStrings_RSStackEAFNOSUPPORT,	"Address family not supported by protocol family."
-	IdResourceStrings_RSStackEADDRINUSE,	"Address already in use."
-	IdResourceStrings_RSStackEADDRNOTAVAIL,	"Cannot assign requested address."
-	IdResourceStrings_RSStackENETDOWN,	"Network is down."
-	IdResourceStrings_RSStackENETUNREACH,	"Network is unreachable."
-	IdResourceStrings_RSStackENETRESET,	"Net dropped connection or reset."
-	IdResourceStrings_RSStackECONNABORTED,	"Software caused connection abort."
-	IdResourceStrings_RSStackECONNRESET,	"Connection reset by peer."
-	IdResourceStrings_RSStackENOBUFS,	"No buffer space available."
-	IdResourceStrings_RSStackEISCONN,	"Socket is already connected."
-	IdResourceStrings_RSStatusDisconnecting,	"Disconnecting."
-	IdResourceStrings_RSStatusDisconnected,	"Disconnected."
-	IdResourceStrings_RSStatusText,	"%s"
-	IdResourceStrings_RSStackError,	"Socket Error # %d\r\n%s"
-	IdResourceStrings_RSStackEINTR,	"Interrupted system call."
-	IdResourceStrings_RSStackEBADF,	"Bad file number."
-	IdResourceStrings_RSStackEACCES,	"Access denied."
-	IdResourceStrings_RSStackEFAULT,	"Buffer fault."
-	IdResourceStrings_RSStackEINVAL,	"Invalid argument."
-	IdResourceStrings_RSStackEMFILE,	"Too many open files."
-	IdResourceStrings_RSStackEWOULDBLOCK,	"Operation would block."
-	IdResourceStrings_RSStackEINPROGRESS,	"Operation now in progress."
-	IdResourceStrings_RSStackEALREADY,	"Operation already in progress."
-	IdResourceStrings_RSStackENOTSOCK,	"Socket operation on non-socket."
-	IdResourceStrings_RSStackEDESTADDRREQ,	"Destination address required."
-	IdResourceStrings_RSStackEMSGSIZE,	"Message too long."
-	HelpIntfs_hNoTopics,	"No topic-based help system installed"
-	ComStrs_sTabFailClear,	"Failed to clear tab control"
-	ComStrs_sTabFailDelete,	"Failed to delete tab at index %d"
 	ComStrs_sTabFailRetrieve,	"Failed to retrieve tab at index %d"
 	ComStrs_sTabFailGetObject,	"Failed to get object at index %d"
 	ComStrs_sTabFailSet,	"Failed to set tab \"%s\" at index %d"
 	ComStrs_sTabFailSetObject,	"Failed to set object at index %d"
 	ComStrs_sTabMustBeMultiLine,	"MultiLine must be True when TabPosition is tpLeft or tpRight"
 	ComStrs_sPageIndexError,	"%d is an invalid PageIndex value.  PageIndex must be between 0 and %d"
-	IdResourceStrings_RSFailedTimeZoneInfo,	"Failed attempting to retrieve time zone information."
-	IdResourceStrings_RSWinsockCallError,	"Error on call Winsock2 library function %s"
-	IdResourceStrings_RSWinsockLoadError,	"Error on loading Winsock2 library (%s)"
-	IdResourceStrings_RSWinsockInitializationError,	"Winsock Initialization Error."
-	IdResourceStrings_RSStatusResolving,	"Resolving hostname %s."
-	IdResourceStrings_RSStatusConnecting,	"Connecting to %s."
-	IdResourceStrings_RSStatusConnected,	"Connected."
-	Consts_SDockedCtlNeedsName,	"Docked control must have a name"
-	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
-	Consts_SDockZoneNotFound,	" - Dock zone not found"
 	Consts_SDockZoneHasNoCtl,	" - Dock zone has no control"
 	Consts_SDockZoneVersionConflict,	"Error loading dock zone from the stream. Expecting version %d, but found %d."
 	Consts_SANSIEncoding,	"ANSI"
@@ -480,9 +259,9 @@ BEGIN
 	HelpIntfs_hNothingFound,	"No help found for %s"
 	HelpIntfs_hNoContext,	"No context-sensitive help installed"
 	HelpIntfs_hNoContextFound,	"No help found for context"
-	Consts_SmkcPgUp,	"PgUp"
-	Consts_SmkcPgDn,	"PgDn"
-	Consts_SmkcEnd,	"End"
+	HelpIntfs_hNoTopics,	"No topic-based help system installed"
+	ComStrs_sTabFailClear,	"Failed to clear tab control"
+	ComStrs_sTabFailDelete,	"Failed to delete tab at index %d"
 	Consts_SmkcHome,	"Home"
 	Consts_SmkcLeft,	"Left"
 	Consts_SmkcUp,	"Up"
@@ -496,9 +275,9 @@ BEGIN
 	Consts_SIconToClipboard,	"Clipboard does not support Icons"
 	Consts_SInvalidMemoSize,	"Text exceeds memo capacity"
 	Consts_SDuplicateMenus,	"Menu '%s' is already being used by another form"
-	Consts_SMsgDlgYes,	"&Yes"
-	Consts_SMsgDlgNo,	"&No"
-	Consts_SMsgDlgOK,	"OK"
+	Consts_SDockedCtlNeedsName,	"Docked control must have a name"
+	Consts_SDockTreeRemoveError,	"Error removing control from dock tree"
+	Consts_SDockZoneNotFound,	" - Dock zone not found"
 	Consts_SMsgDlgCancel,	"Cancel"
 	Consts_SMsgDlgHelp,	"&Help"
 	Consts_SMsgDlgAbort,	"&Abort"
@@ -512,9 +291,9 @@ BEGIN
 	Consts_SmkcEsc,	"Esc"
 	Consts_SmkcEnter,	"Enter"
 	Consts_SmkcSpace,	"Space"
-	Consts_SControlParentSetToSelf,	"A control cannot have itself as its parent"
-	Consts_SOKButton,	"OK"
-	Consts_SCancelButton,	"Cancel"
+	Consts_SmkcPgUp,	"PgUp"
+	Consts_SmkcPgDn,	"PgDn"
+	Consts_SmkcEnd,	"End"
 	Consts_SYesButton,	"&Yes"
 	Consts_SNoButton,	"&No"
 	Consts_SHelpButton,	"&Help"
@@ -528,9 +307,9 @@ BEGIN
 	Consts_SMsgDlgError,	"Error"
 	Consts_SMsgDlgInformation,	"Information"
 	Consts_SMsgDlgConfirm,	"Confirm"
-	Consts_SImageWriteFail,	"Failed to write ImageList data to stream"
-	Consts_SWindowDCError,	"Error creating window device context"
-	Consts_SWindowClass,	"Error creating window class"
+	Consts_SMsgDlgYes,	"&Yes"
+	Consts_SMsgDlgNo,	"&No"
+	Consts_SMsgDlgOK,	"OK"
 	Consts_SCannotFocus,	"Cannot focus a disabled or invisible window"
 	Consts_SParentRequired,	"Control '%s' has no parent window"
 	Consts_SParentGivenNotAParent,	"Parent given is not a parent of '%s'"
@@ -544,10 +323,10 @@ BEGIN
 	Consts_SNoTimers,	"Not enough timers available"
 	Consts_SGroupIndexTooLow,	"GroupIndex cannot be less than a previous menu item's GroupIndex"
 	Consts_SNoMDIForm,	"Cannot create form. No MDI forms are currently active"
-	RTLConsts_SUnknownProperty,	"Property %s does not exist"
+	Consts_SControlParentSetToSelf,	"A control cannot have itself as its parent"
+	Consts_SOKButton,	"OK"
+	Consts_SCancelButton,	"Cancel"
 	RTLConsts_SWriteError,	"Stream write error"
-	RTLConsts_SThreadCreateError,	"Thread creation error: %s"
-	RTLConsts_SThreadError,	"Thread Error: %s (%d)"
 	Consts_SInvalidTabPosition,	"Tab position incompatible with current tab style"
 	Consts_SInvalidTabStyle,	"Tab style incompatible with current tab position"
 	Consts_SInvalidBitmap,	"Bitmap image is not valid"
@@ -560,7 +339,9 @@ BEGIN
 	Consts_SInvalidImageList,	"Invalid ImageList"
 	Consts_SImageIndexError,	"Invalid ImageList Index"
 	Consts_SImageReadFail,	"Failed to read ImageList data from stream"
-	RTLConsts_SInvalidProperty,	"Invalid property value"
+	Consts_SImageWriteFail,	"Failed to write ImageList data to stream"
+	Consts_SWindowDCError,	"Error creating window device context"
+	Consts_SWindowClass,	"Error creating window class"
 	RTLConsts_SInvalidPropertyPath,	"Invalid property path"
 	RTLConsts_SInvalidPropertyValue,	"Invalid property value"
 	RTLConsts_SInvalidRegType,	"Invalid data type for '%s'"
@@ -576,6 +357,7 @@ BEGIN
 	RTLConsts_SSeekNotImplemented,	"%s.Seek not implemented"
 	RTLConsts_SSortedListError,	"Operation not allowed on sorted list"
 	RTLConsts_SUnknownGroup,	"%s not in a class registration group"
+	RTLConsts_SUnknownProperty,	"Property %s does not exist"
 	SysConst_SLongDayNameSat,	"Saturday"
 	RTLConsts_SAncestorNotFound,	"Ancestor for '%s' not found"
 	RTLConsts_SAssignError,	"Cannot assign a %s to a %s"

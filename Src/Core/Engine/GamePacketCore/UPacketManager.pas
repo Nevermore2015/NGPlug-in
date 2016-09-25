@@ -25,6 +25,7 @@ type
       Cri:TCriticalSection;
       List:TList;
       Procedure OnPacketHandle(PacketType:Cardinal;_PacketObject:PPacketObject);
+      function GetListCount: Cardinal;
     public
       constructor Create();
 
@@ -32,6 +33,8 @@ type
 
       Procedure OnSendHandle(_PacketObject:PPacketObject);
       Procedure OnRecvHandle(_PacketObject:PPacketObject);
+
+      property HandleCount:Cardinal read GetListCount;
   end;
 
 var
@@ -65,6 +68,11 @@ begin
   List:=TList.Create;
   Cri:=TCriticalSection.Create;
   
+end;
+
+function TPacketManager.GetListCount: Cardinal;
+begin
+  Result:=List.Count;
 end;
 
 procedure TPacketManager.OnPacketHandle(PacketType:Cardinal;_PacketObject:PPacketObject);

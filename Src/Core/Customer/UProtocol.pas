@@ -19,7 +19,13 @@ type
 
 {************************游戏内封包协议*******************************}
 
+//获取协议ID
+Function GetProtocolId(pBuffer:Pointer):Integer;
+
 implementation
 
-
+Function GetProtocolId(pBuffer:Pointer):Integer;
+begin
+  Result:=pInteger(pBuffer)^;
+end;
 end.

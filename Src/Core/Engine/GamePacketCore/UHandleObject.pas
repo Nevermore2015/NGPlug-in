@@ -1,19 +1,24 @@
 unit UHandleObject;
-
+{
+  封包分发对象基类
+  用户继承后可以扩展为对单一协议的解析
+}
 interface
 uses
-  Windows,Classes,SyncObjs,UPacketManager,UProtocol;
+  Windows,UPacketManager,UProtocol;
 
 type
 
   THandleObjct = class
     private
       mHandleName:String;
+    protected
+      Function GetProtocol(pBuffer:Pointer):Integer;
     public
       constructor Create(_HandleName:String);
 
-      Procedure OnRecv(_PacketObject:PPacketObject);virtual;
-      Procedure OnSend(_PacketObject:PPacketObject);virtual;
+      Procedure OnRecv(_PacketObject:PPacketObject);virtual;abstract;
+      Procedure OnSend(_PacketObject:PPacketObject);virtual;abstract;
 
       property HandleName:String read mHandleName;
   end;
@@ -29,14 +34,9 @@ begin
   mHandleName:=_HandleName;
 end;
 
-procedure THandleObjct.OnRecv(_PacketObject: PPacketObject);
+function THandleObjct.GetProtocol(pBuffer: Pointer): Integer;
 begin
-  //
-end;
-
-procedure THandleObjct.OnSend(_PacketObject: PPacketObject);
-begin
-  //
+  Result:=GetProtocolId(pBuffer);
 end;
 
 end.

@@ -23,7 +23,7 @@ object DbgForm: TDbgForm
     Align = alClient
     TabOrder = 0
     object ts1: TTabSheet
-      Caption = 'ts1'
+      Caption = 'Packet'
       object pnl1: TPanel
         Left = 0
         Top = 344

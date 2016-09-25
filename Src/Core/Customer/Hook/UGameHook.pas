@@ -21,7 +21,7 @@ implementation
 uses
   UPacketManager,GD_Utils;
 
-function MakePacketObject(PacketType:Cardinal;p:Pointer;Len:Cardinal):PPacketObject;
+Procedure MakePacketObject(PacketType:Cardinal;p:Pointer;Len:Cardinal);
 var
   PacketObject:TPacketObject;
 begin
@@ -56,8 +56,6 @@ end;
 
 
 Procedure StartHook();
-var
-  Res:Bool;
 begin
   LogPrintf('Execute Hook Proc Success',[]);
 end;
