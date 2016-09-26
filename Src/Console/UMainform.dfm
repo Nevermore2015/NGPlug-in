@@ -2156,21 +2156,25 @@ object MainForm: TMainForm
     Columns = <
       item
         Caption = 'PID'
+        Width = 40
       end
       item
         Caption = #36134#21495
+        Width = 100
       end
       item
         Caption = #26381#21153#22120
       end
       item
         Caption = #35282#33394#21517
+        Width = 80
       end
       item
         Caption = #31561#32423
       end
       item
         Caption = #32463#39564#20540
+        Width = 100
       end
       item
         Caption = #32972#21253
@@ -2180,6 +2184,7 @@ object MainForm: TMainForm
       end
       item
         Caption = #33050#26412
+        Width = 120
       end
       item
         AutoSize = True
@@ -2267,6 +2272,7 @@ object MainForm: TMainForm
       Height = 25
       Caption = #24555#36895#21551#21160
       TabOrder = 3
+      OnClick = btn2Click
     end
     object lbledt3: TLabeledEdit
       Left = 360
@@ -2278,6 +2284,7 @@ object MainForm: TMainForm
       EditLabel.Caption = #26381#21153#22120':'
       LabelPosition = lpLeft
       TabOrder = 4
+      Text = '0'
     end
     object btn3: TButton
       Left = 501

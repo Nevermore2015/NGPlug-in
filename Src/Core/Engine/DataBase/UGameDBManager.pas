@@ -1,5 +1,13 @@
 unit UGameDBManager;
 
+{
+  游戏数据管理类
+
+  可使用 CreateNewDataType 创建一个数据集对象
+    数据集对象内 可存放数据对象,对象的结构由用户自行定义
+
+  可使用 QueryDataByTypeId 查询一个数据集对象
+}
 interface
 uses
   Windows,Classes,SyncObjs,UGameDataBase;

@@ -1,6 +1,9 @@
 unit UProtocol;
 {
-  协议类，不可缺少
+  游戏内封包协议管理
+  不可缺少
+
+  
 }
 interface
 uses

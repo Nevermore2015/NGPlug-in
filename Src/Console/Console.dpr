@@ -11,11 +11,11 @@ uses
   ULog in '..\Inc\Log\ULog.pas',
   GD_Utils in '..\Inc\GD_Utils.pas',
   MD5 in '..\Inc\MD5.pas',
-  UGlobal in 'UGlobal.pas',
   UCheckVersion in 'UCheckVersion.pas',
   superobject in '..\Inc\superobject.pas',
   UGameAddrManager in 'UGameAddrManager.pas',
-  UInject in '..\Inc\UInject.pas';
+  UConsoleProtocol in '..\Core\Engine\Console\UConsoleProtocol.pas',
+  UGlobal in 'Customer\UGlobal.pas';
 
 {$R *.res}
 var
@@ -39,7 +39,7 @@ begin
                         Application.Initialize;
                         Application.MainFormOnTaskbar := True;
                         Application.CreateForm(TMainForm, MainForm);
-  MainForm.Caption:=ConsoleTitle;
+                        MainForm.Caption:=ConsoleTitle;
                         Application.Run;
                       end;
                     1:begin

@@ -6,6 +6,7 @@ uses
 const
   C_ROOT = 'system';
   C_GAME = 'game';
+  C_NGPLUGS = 'NgPlugin';
 type
   TConfig = class
     private
@@ -15,8 +16,9 @@ type
       mFileName:String;
       mIni:TIniFile;
       function GetAuthUrl: String;
-    function GetGameBin: string;
-    function GetGameId: Integer;
+      function GetGameBin: string;
+      function GetGameId: Integer;
+    function GetPort: Integer;
     public
       constructor Create(Handle:Cardinal;FileName:String);
       destructor Destroy;override;
@@ -30,6 +32,8 @@ type
       property GameBin:string read GetGameBin;
 
       property GameId:Integer read GetGameId;
+
+      property ConsolePort:Integer read GetPort;
   end;
 var
   Config:TConfig;
@@ -66,7 +70,7 @@ end;
 
 function TConfig.GetAuthUrl: String;
 begin
- Result:= mIni.ReadString(C_ROOT,'AuthUrl','');
+ Result:= mIni.ReadString(C_ROOT,'ServerUrl','');
 end;
 
 function TConfig.GetGameBin: string;
@@ -77,6 +81,11 @@ end;
 function TConfig.GetGameId: Integer;
 begin
  Result:= mIni.ReadInteger(C_GAME,'GameId',0);
+end;
+
+function TConfig.GetPort: Integer;
+begin
+ Result:= mIni.ReadInteger(C_NGPLUGS,'Port',0);
 end;
 
 end.
