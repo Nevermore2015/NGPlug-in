@@ -43,7 +43,6 @@ type
     lbledt2: TLabeledEdit;
     btn2: TButton;
     lbledt3: TLabeledEdit;
-    btn3: TButton;
     N2: TMenuItem;
     N3: TMenuItem;
     N4: TMenuItem;
@@ -63,6 +62,7 @@ type
     N16: TMenuItem;
     N17: TMenuItem;
     N18: TMenuItem;
+    btn3: TButton;
     procedure btn3Click(Sender: TObject);
     procedure N12Click(Sender: TObject);
     procedure N11Click(Sender: TObject);

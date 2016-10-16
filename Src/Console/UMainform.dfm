@@ -2211,7 +2211,7 @@ object MainForm: TMainForm
       Align = alClient
       TabOrder = 0
       object ts1: TTabSheet
-        Caption = #26085#24535
+        Caption = #25511#21046#21488#26085#24535
         object mmo1: TMemo
           Left = 0
           Top = 0
@@ -2225,6 +2225,15 @@ object MainForm: TMainForm
           TabOrder = 0
         end
       end
+    end
+    object btn3: TButton
+      Left = 736
+      Top = 1
+      Width = 64
+      Height = 18
+      Caption = #28165#31354#26085#24535
+      TabOrder = 1
+      OnClick = btn3Click
     end
   end
   object grp1: TGroupBox
@@ -2286,22 +2295,13 @@ object MainForm: TMainForm
       TabOrder = 4
       Text = '0'
     end
-    object btn3: TButton
-      Left = 501
-      Top = 15
-      Width = 75
-      Height = 25
-      Caption = #28165#31354#26085#24535
-      TabOrder = 5
-      OnClick = btn3Click
-    end
     object chk1: TCheckBox
       Left = 648
       Top = 20
       Width = 73
       Height = 17
       Caption = #20351#29992#20195#29702
-      TabOrder = 6
+      TabOrder = 5
     end
   end
   object mm1: TMainMenu
