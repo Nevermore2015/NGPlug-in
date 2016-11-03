@@ -25,7 +25,7 @@ uses
   UProtocol in 'Customer\UProtocol.pas',
   UHandleObject in 'Engine\GamePacketCore\UHandleObject.pas',
   UPacketManager in 'Engine\GamePacketCore\UPacketManager.pas',
-  UConfig in 'Engine\Config\UConfig.pas',
+  UEngineConfig in 'Engine\Config\UEngineConfig.pas',
   UConsoleProtocol in 'Engine\Console\UConsoleProtocol.pas',
   UConsoleSDK in 'Engine\Console\UConsoleSDK.pas',
   UNgPlugConfig in 'Customer\UNgPlugConfig.pas',
@@ -34,13 +34,20 @@ uses
   UGameDBManager in 'Engine\DataBase\UGameDBManager.pas';
 
 {$R *.res}
+function LoadConfig(Handle:Cardinal;FileName:String):bool;
+begin
+  g_EngineConfig:=TEngineConfig.Create(Handle,FileName);
+  Result:=g_EngineConfig.Active;
+  if not(g_EngineConfig.Active) then
+    g_EngineConfig.Free;
+end;
 
 begin
   //读取配置
   if LoadConfig(HInstance,'Config.ini') then
     begin
       //连接控制台
-      g_ConsoleNet:=TConsoleNet.Create(Config.ConsoleIp,Config.ConsolePort,GetCurrentProcessId);
+      g_ConsoleNet:=TConsoleNet.Create(g_EngineConfig.ConsoleIp,g_EngineConfig.ConsolePort,GetCurrentProcessId);
       if g_ConsoleNet.Active then
         begin
           Dbgprint('Token:%X GameVer:%d',[

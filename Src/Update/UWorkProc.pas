@@ -44,7 +44,7 @@ type
 
 implementation
   uses
-    UMainForm,UConfig;
+    UUpdateForm,UConfig;
 { Important: Methods and properties of objects in visual components can only be
   used in a method called using Synchronize, for example,
 
@@ -70,9 +70,9 @@ begin
   Result:= -1;
   mHttp:=TidHttp.Create(nil);
 
-  if Config.Active then
+  if g_Config.Active then
     begin
-      Rep:=mHttp.Get(Config.UpdateUrl + UP_FILE);
+      Rep:=mHttp.Get(g_Config.UpdateUrl + UP_FILE);
       if Strlen(Pchar(Rep)) > 0 then
         begin
           try
@@ -91,7 +91,7 @@ begin
                 Node:=_FileNode.Create(
                   jsub['file'].AsString,
                   jsub['md5'].AsString,
-                  config.UpdateUrl + jsub['url'].AsString,
+                  g_Config.UpdateUrl + jsub['url'].AsString,
                   mHttp
                 );
 

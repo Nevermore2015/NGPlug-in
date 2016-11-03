@@ -7,7 +7,7 @@ uses
   UMainform in 'UMainform.pas' {MainForm},
   UGameClientObj in 'UGameClientObj.pas',
   UWorkThread in 'UWorkThread.pas',
-  UConfig in 'UConfig.pas',
+  UConsoleConfig in 'UConsoleConfig.pas',
   ULog in '..\Inc\Log\ULog.pas',
   GD_Utils in '..\Inc\GD_Utils.pas',
   MD5 in '..\Inc\MD5.pas',
@@ -20,6 +20,15 @@ uses
 {$R *.res}
 var
   Handle:Cardinal;
+
+function LoadConfig(Handle:Cardinal;FileName:String):bool;
+begin
+  g_ConsoleConfig:=TConsoleConfig.Create(Handle,FileName);
+  Result:=g_ConsoleConfig.Active;
+  if not(g_ConsoleConfig.Active) then
+    g_ConsoleConfig.Free;
+end;
+
 begin
   Handle:=CreateMutex(nil,True,PChar(Format('NGPlugIn_%d_%d',[ConsoleVersion,GameId])));
   if Handle <> 0 then

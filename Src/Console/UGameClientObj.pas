@@ -2,7 +2,7 @@ unit UGameClientObj;
 
 interface
  uses
-    Windows,UConfig,SysUtils,WinSock,UConsoleProtocol,GD_Utils;
+    Windows,UConsoleConfig,SysUtils,WinSock,UConsoleProtocol,GD_Utils;
 
 type
     TGameClientObj = class
@@ -150,7 +150,7 @@ begin
   if (Handle <> 0) and (MapHandle <> 0) then
     begin
 
-      WinExec(PChar(Format('.\Jumper.exe %s %s %s',[EventName,MapName,config.GameBin])),SW_NORMAL);
+      WinExec(PChar(Format('.\_Jumper.exe %s %s %s',[EventName,MapName,g_ConsoleConfig.GameBin])),SW_NORMAL);
 
       WaitForSingleObject(Handle,INFINITE);
       pBuf:=MapViewOfFile(MapHandle,FILE_MAP_READ,0,0,0);

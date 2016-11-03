@@ -4,7 +4,7 @@ uses
   Forms,
   SysUtils,
   Windows,
-  UMainForm in 'UMainForm.pas' {Form1},
+  UUpdateForm in 'UUpdateForm.pas' {Form1},
   UWorkProc in 'UWorkProc.pas',
   MD5 in '..\Inc\MD5.pas',
   superobject in '..\Inc\superobject.pas',
@@ -13,6 +13,13 @@ uses
   UConfig in 'UConfig.pas';
 
 {$R *.res}
+function LoadConfig(Handle:Cardinal;FileName:String):bool;
+begin
+  g_Config:=TConfig.Create(Handle,FileName);
+  Result:=g_Config.Active;
+  if not(g_Config.Active) then
+    g_Config.Free;
+end;
 
 begin
   if ParamCount = 1 then
@@ -23,7 +30,6 @@ begin
           Application.MainFormOnTaskbar := True;
           Application.CreateForm(TForm1, Form1);
           Form1.lbl1.Caption:= 'µ±Ç°°æ±¾:' + ParamStr(1);
-         
           Application.Run;
         end;
     end

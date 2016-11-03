@@ -17,15 +17,14 @@ function HashFile(FileName:String):String;
 function CreateLog(Handle:Cardinal):bool;
 //–¥»’÷æ
 procedure LogPrintf(const Str:String;Args:Array of const);
-//º”‘ÿ≈‰÷√
-function LoadConfig(Handle:Cardinal;FileName:String):bool;
+
 
 
 
 
 implementation
 uses
-  MD5,ULog,UConfig;
+  MD5,ULog;
 
 procedure Dbgprint(const Str:String;Args:Array of const);
 begin
@@ -74,12 +73,6 @@ begin
     end;
 end;
 
-function LoadConfig(Handle:Cardinal;FileName:String):bool;
-begin
-  Config:=TConfig.Create(Handle,FileName);
-  Result:=Config.Active;
-  if not(Config.Active) then
-    Config.Free;
-end;
+
 
 end.

@@ -25,7 +25,7 @@ type
       property UpdateUrl:String read GetUpdateUrl;
   end;
 var
-  Config:TConfig;
+  g_Config:TConfig;
 
 implementation
 uses

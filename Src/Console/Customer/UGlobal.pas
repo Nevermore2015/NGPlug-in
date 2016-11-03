@@ -14,11 +14,11 @@ const
   C_AUTH_CHECK = 'Auth.php';
 var
   //控制台版本号
-  ConsoleVersion:Integer = 20160825;
+  ConsoleVersion:Integer = 20161103;
   //支持游戏ID
   GameId:Integer = 0;
   //控制台标题
-  ConsoleTitle:String = '蛮荒搜神记';
+  ConsoleTitle:String = '龙魂时刻';
 implementation
 
 end.

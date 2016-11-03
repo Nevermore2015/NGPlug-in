@@ -2,7 +2,7 @@ unit UGameAddrManager;
 
 interface
 uses
-  windows,Classes,SysUtils,superobject,UConfig,IdHTTP,UConsoleProtocol,GD_Utils;
+  windows,Classes,SysUtils,superobject,UConsoleConfig,IdHTTP,UConsoleProtocol,GD_Utils;
 
 type
   _Addr_Data = packed record
@@ -63,8 +63,8 @@ begin
   Http:=TIdHTTP.Create(nil);
   try
     try
-      Dbgprint('Auth = %s',[Config.AuthUrl]);
-      Rep:=Http.Get(Format('%s',[Config.AuthUrl + C_AUTH_CHECK]));
+      Dbgprint('Auth = %s',[g_ConsoleConfig.AuthUrl]);
+      Rep:=Http.Get(Format('%s',[g_ConsoleConfig.AuthUrl + C_AUTH_CHECK]));
       Jo:=SO(Rep);
       mGameId:= Jo['gameid'].AsInteger;
       mDBId:=Jo['id'].AsInteger;

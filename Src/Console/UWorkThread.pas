@@ -3,7 +3,7 @@ unit UWorkThread;
 interface
 
 uses
-  Windows,Classes,WinSock,UConfig,GD_Utils,UConsoleProtocol;
+  Windows,Classes,WinSock,UConsoleConfig,GD_Utils,UConsoleProtocol;
 
 type
   TWorkThread = class(TThread)
@@ -69,7 +69,7 @@ begin
            begin
              ioctlsocket(SocketObj,FIONBIO,iMode);
              Ser.sa_family:= AF_INET;
-             Ser.sin_port:=htons(Config.ConsolePort);
+             Ser.sin_port:=htons(g_consoleConfig.ConsolePort);
              Ser.sin_addr.S_addr:=INADDR_ANY;
              Wsstatus := bind(SocketObj,Ser,SizeOf(Ser));
              if Wsstatus = 0 then
